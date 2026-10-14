@@ -1,7 +1,7 @@
 # csc340-assignment3
 
 # Pokémon Character API
-[The Render Link](https://csc340-assignment3-characterapi.onrender.com/)
+[The Render Link](https://csc340-assignment3-characterapi.onrender.com/api/characters)
 
 ## App Description & Character Type
 This application is a Spring Boot RESTful API designed to manage Pokémon characters. It allows users to perform full CRUD operations (Create, Read, Update, Delete) on Pokémon entities, as well as filter characters by region and search for them by name using case-insensitive partial matching. The application uses a PostgreSQL database hosted on Neon and is containerized with Docker for deployment on Render.
