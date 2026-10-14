@@ -2,22 +2,18 @@
 FROM eclipse-temurin:25-jdk-alpine AS builder
 WORKDIR /app
 
-# Copy Maven wrapper and configuration files first to cache dependencies
 COPY mvnw .
 COPY .mvn .mvn
+RUN chmod +x mvnw
 COPY pom.xml .
 
-# Copy the source code
 COPY src src
 
-# Build the application (skipping tests for a faster container build)
 RUN ./mvnw clean package -DskipTests
 
-# Stage 2: Create the final lightweight runtime image
 FROM eclipse-temurin:25-jre-alpine
 WORKDIR /app
 
-# Copy the packaged JAR from the builder stage
 COPY --from=builder /app/target/*.jar app.jar
 
 # Run the application
