@@ -3,7 +3,7 @@ package com.example.character_api.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-
+   
 @Entity
 @Table(name = "pokemon_characters")
 public class PokemonCharacter {
