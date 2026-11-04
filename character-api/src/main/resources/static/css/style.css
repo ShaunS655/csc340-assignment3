@@ -1,0 +1,225 @@
+
+/* HEADER SECTION */
+.site-header {
+  display: flex;
+  justify-content: space-between; /* Spreads left, center, and right evenly */
+  align-items: center;            /* Centers items vertically */
+  padding: 30px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle bottom shadow */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't affect total width */
+  gap: 20%;
+}
+
+.header-left, 
+.header-right {
+  flex: 1; 
+  display: flex;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border: 3px solid black; 
+  padding: 10px; 
+  text-align: center; 
+  border-radius: 8px; 
+}
+
+.header-right {
+  justify-content: flex-end; 
+  
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.search-form input {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.search-form button {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #f0f0f0;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* BODY SECTION */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;   
+    width: 100%;
+}
+
+/* Starting statement */
+.start-statement {
+  margin-bottom: 20px;
+}
+
+/* Image grids */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Updated Card Layout */
+.character-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  
+  display: flex;         
+  flex-direction: row;   
+  gap: 16px;             
+  align-items: center;   
+}
+
+/* Updated Image Styling */
+.character-img {
+  width: 150px;          
+  height: 150px;         
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;        
+}
+
+/* New Text Container Wrapper */
+.character-info {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  height: 100%;
+}
+
+.character-title {
+  font-size: 1.5rem;
+  margin: 0 0 8px 0;
+}
+
+.character-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.view-details-btn {
+  align-self: flex-start; 
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* DETAIL PAGE INFO */
+.character-profile-layout {
+    display: flex;
+    gap: 24px;         
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;   
+}
+
+/* Sets up the left column */
+.quadrant-left {
+    flex: 1;           
+    min-width: 250px;  
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;         
+}
+
+/* Forces image into the box */
+.quad-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Styling for your quick details bucket */
+.quad-quick-details {
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+/* Quadrant for the lore and biology */
+.quadrant-right-lore {
+    flex: 2;           /* To take up more space for the layout */
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+/*ABOUT PAGE*/
+
+/* Statement of why I chose this */
+.main-statement {
+  width: 30%;
+  background-color: white;
+  border: 3px solid black; 
+  padding: 20px; 
+  text-align: center; 
+  border-radius: 8px; 
+  margin-bottom: 20px;
+}
+
+/* Sourcing the information */
+.source-statement {
+  width: 30%;
+  background-color: white;
+  border: 3px solid black; 
+  padding: 20px; 
+  text-align: center; 
+  border-radius: 8px; 
+  margin-bottom: 20px;
+}
+
+.about-image{
+  width: 31.25%;
+  background-color: white;
+  border: 3px solid black; 
+  padding: 1px; 
+  text-align: center; 
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
