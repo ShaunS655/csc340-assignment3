@@ -1,37 +1,8 @@
-<!DOCTYPE html> 
+<#import "layout.ftlh" as l>
 
-<html> 
+<@l.layout title="Add New Character - Suggested Pokemon">
 
-<!-- HEADER SECTION -->
-<header class="site-header">
-  <!-- Left: Search Bar -->
-  <div class="header-left">
-    <form class="search-form">
-      <input type="text" placeholder="Search..." aria-label="Search">
-      <button type="submit">🔍</button>
-    </form>
-  </div>
-
-  <!-- Middle Header -->
-  <div class="header-center">
-    <a href="#" class="logo">Suggested Pokemon</a>
-  </div>
-
-    <div class="header-right">
-    <nav class="nav-buttons">
-    <a href="index.html"> <button type="button">Home</button></a>
-    <a href="detail.html"> <button type="button">Details</button></a>
-    <a href="about.html"> <button type="button">About</button></a>
-    <a href="new-character-form.html"> <button type="button">Add a Character</button></a>
-    </nav>
-  </div>
-</header>
-<!-- END OF HEADER -->
-
-<!-- BODY SECTION -->
-  <body> 
-
-    <form>
+    <form action="/characters" method="POST">
         <h2>Add New Entry</h2>
 
         <!-- Basic Info -->
@@ -44,8 +15,13 @@
             </div>
 
             <div class="form-group">
-                <label for="type"><strong>Type</strong>Type</strong></label>
+                <label for="type"><strong>Type</strong></label>
                 <input type="text" id="type" name="type" placeholder="e.g., Electric">
+            </div>
+
+            <div class="form-group">
+                <label for="imageUrl"><strong>Image Path / URL</strong></label>
+                <input type="text" id="imageUrl" name="imageUrl" placeholder="e.g., /images/Pikachu.png">
             </div>
 
             <div class="form-group">
@@ -59,8 +35,8 @@
             <legend>Evolutionary Line</legend>
 
             <div class="form-group">
-                <label for="evolves-from"><strong>Evolution (Previous Form)</strong></label>
-                <input type="text" id="evolves-from" name="evolves_from" placeholder="e.g., Pichu">
+                <label for="evolveFrom"><strong>Evolution (Previous Form)</strong></label>
+                <input type="text" id="evolveFrom" name="evolveFrom" placeholder="e.g., Pichu">
             </div>
 
             <div class="form-group">
@@ -84,24 +60,12 @@
             </div>
 
             <div class="form-group">
-                <label for="game-appearances"><strong>Game Appearances</strong></label>
-                <textarea id="game-appearances" name="game_appearances" rows="3" placeholder="List the games this entry appears in."></textarea>
+                <label for="gameAppearances"><strong>Game Appearances</strong></label>
+                <textarea id="gameAppearances" name="gameAppearances" rows="3" placeholder="List the games this entry appears in."></textarea>
             </div>
         </fieldset>
 
         <button type="submit">Add to List</button>
     </form>
 
-  </body>
-<!-- END OF BODY -->
-
-<style>
-
-    body {
-        background-color: #C2E5D3;
-    }
-</style>
-
-<!-- LINK TO STYLESHEET -->
-  <link rel="stylesheet" href="style.css">
-</html> 
+</@l.layout>

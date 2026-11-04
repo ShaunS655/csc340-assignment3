@@ -46,6 +46,14 @@ public class PokemonCharacterService {
         existing.setGeneration(updatedCharacter.getGeneration());
         existing.setLegendary(updatedCharacter.getLegendary());
         
+        // --- Make sure to include the new UI fields here too! ---
+        existing.setImageUrl(updatedCharacter.getImageUrl());
+        existing.setEvolveFrom(updatedCharacter.getEvolveFrom());
+        existing.setEvolution(updatedCharacter.getEvolution());
+        existing.setBiology(updatedCharacter.getBiology());
+        existing.setLore(updatedCharacter.getLore());
+        existing.setGameAppearances(updatedCharacter.getGameAppearances());
+        
         return repository.save(existing);
     }
 
