@@ -3,10 +3,10 @@
 <@l.layout title="Suggested Pokemon - Home">
 
     <div class="start-statement">
-        This is a page simply about some of my favorite Pokemon. Browse your favorites below or add a new one!
+        This is a page simply about some of my favorite Pokemon. I have chosen five to represent that.
     </div>
 
-    <!-- DYNAMIC GRID OF CHARACTERS FROM DATABASE -->
+    <!-- DYNAMIC GRID OF CHARACTERS -->
     <div class="character-grid">
         <#list characters as character>
             <article class="character-card">
@@ -14,7 +14,10 @@
                 <div class="character-info">
                     <h2 class="character-title">${character.name}</h2>
                     <p class="character-desc">${character.description!''}</p>
-                    <a href="/detail?id=${character.characterId}"><button class="view-details-btn">View Details</button></a>
+                    <!-- Link to the dynamic detail route -->
+                    <a href="/characters/${character.characterId}">
+                        <button class="view-details-btn">View Details</button>
+                    </a>
                 </div>
             </article>
         </#list>
