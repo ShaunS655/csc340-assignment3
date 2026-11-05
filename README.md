@@ -1,8 +1,5 @@
 # csc340-assignment3
 
-# Pokémon Character API
-[The Render Link](https://csc340-assignment3-characterapi.onrender.com/api/characters)
-
 ## App Description & Character Type
 This application is a Spring Boot RESTful API designed to manage Pokémon characters. It allows users to perform full CRUD operations (Create, Read, Update, Delete) on Pokémon entities, as well as filter characters by region and search for them by name using case-insensitive partial matching. The application uses a PostgreSQL database hosted on Neon and is containerized with Docker for deployment on Render.
 
@@ -17,6 +14,12 @@ This application is a Spring Boot RESTful API designed to manage Pokémon charac
 | `type` | String | Required (not null, not blank) - e.g., Electric, Fire |
 | `generation` | String | Required (not null, not blank) - e.g., Generation I |
 | `legendary` | Boolean | Required (not null) - true or false |
+| `imageUrl` | String | Path or URL to the character's image asset |
+| `evolveFrom` | String | Optional - The previous evolution stage (e.g., Pichu, Wooper) |
+| `evolution` | String | Optional - The next evolution stage or "None" |
+| `biology` | String | Optional - Description of physical appearance and traits |
+| `lore` | String | Optional - Background history, myths, or legends |
+| `gameAppearances` | String | Optional - List of video games the character appears in |
 
 ---
 
@@ -37,10 +40,16 @@ This application is a Spring Boot RESTful API designed to manage Pokémon charac
 #### `POST /api/characters` Example Request Body
 ```json
 {
-    "name": "Pikachu",
-    "description": "An Electric-type Mouse Pokémon.",
-    "region": "Kanto",
-    "type": "Electric",
-    "generation": "Generation I",
-    "legendary": false
+  "name": "Flygon",
+  "description": "The Mystic Pokémon, known for kicking up sandstorms to hide itself while flying.",
+  "region": "Hoenn",
+  "type": "Ground/Dragon",
+  "generation": "Generation III",
+  "legendary": false,
+  "imageUrl": "/images/Flygon.png",
+  "evolveFrom": "Vibrava",
+  "evolution": "None",
+  "biology": "Flygon has large red covers that protect its eyes from sandstorms, a pair of lightweight green wings, and a tail ending in small, diamond-shaped segments.",
+  "lore": "Known as the Desert Spirit, the flapping of its wings creates a melodic sound like a singing voice, which lures unsuspecting prey into blinding sandstorms.",
+  "gameAppearances": "Pokemon Ruby, Sapphire, Emerald, Omega Ruby, Alpha Sapphire, Sword, Shield, Scarlet, Violet"
 }
