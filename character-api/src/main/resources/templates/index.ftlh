@@ -1,9 +1,9 @@
 <#import "layout.ftlh" as l>
 
-<@l.layout title="Suggested Pokemon - Home">
+<@l.layout title="Pokemon Gallery - Home">
 
     <div class="start-statement">
-        This is a page simply about some of my favorite Pokemon. I have chosen five to represent that.
+        This is a page simply about some Pokemon.
     </div>
 
     <!-- DYNAMIC GRID OF CHARACTERS -->

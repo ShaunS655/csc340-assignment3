@@ -18,13 +18,19 @@ public class PokemonCharacterService {
     }
 
     public List<PokemonCharacter> getAllCharacters(String region, String name) {
-        if (region != null && !region.isEmpty()) {
-            return repository.findByRegionIgnoreCase(region);
-        }
-        if (name != null && !name.isEmpty()) {
-            return repository.findByNameContainingIgnoreCase(name);
-        }
-        return repository.findAll();
+    boolean hasRegion = region != null && !region.isBlank();
+    boolean hasName = name != null && !name.isBlank();
+
+    if (hasRegion && hasName) {
+        return repository.findByRegionIgnoreCaseAndNameContainingIgnoreCase(region.trim(), name.trim());
+    }
+    if (hasRegion) {
+        return repository.findByRegionIgnoreCase(region.trim());
+    }
+    if (hasName) {
+        return repository.findByNameContainingIgnoreCase(name.trim());
+    }
+    return repository.findAll();
     }
 
     public PokemonCharacter getCharacterById(Long id) {

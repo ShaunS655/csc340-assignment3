@@ -1,23 +1,20 @@
 <#import "layout.ftlh" as l>
 
-<@l.layout title="About - Suggested Pokemon">
-
-    <div class="about-image">
-        <img src="/images/cloddex.png" alt="Pokemon About Image" width="600" height="215">
+<@l.layout title="About - Pokémon Character Gallery">
+    <div class="about-container" style="max-width: 800px; margin: 40px auto; padding: 20px;">
+        <h2>About This Application</h2>
+        <p>Welcome to the Pokémon Character Gallery! This full-stack web application is built using <strong>Spring Boot</strong>, <strong>Spring Data JPA</strong>, and <strong>Apache FreeMarker</strong>.</p>
+        
+        <h3>Features</h3>
+        <ul>
+            <li>Browse and search through a dynamic character catalog.</li>
+            <li>View detailed biological info, lore, and game appearances.</li>
+            <li>Add new characters and update existing records.</li>
+            <li>Full CRUD support with database persistence.</li>
+        </ul>
+        
+        <p style="margin-top: 30px;">
+            <a href="/" class="btn">&larr; Back to Gallery</a>
+        </p>
     </div>
-
-    <div class="main-statement">
-        <p><strong>Why I Chose This Topic</strong></p>
-        You may ask, "Why Pokemon?" Well, the simple answer is that everyone knows Pokemon! But do you know the ones that I have chosen?
-        It's unlikely. So, I wanted to present these creatures to you in a simple and easy way. To show something slightly familiar, but
-        also new things that have come from it. Some are new. Some are old. But I like them all.
-
-        Also I like Clodsire.
-    </div>
-
-    <div class="source-statement">
-        <p><strong>Source</strong></p>
-        The information on this page was sourced from the <a href="https://www.pokemon.com/us/pokedex/" target="_blank">official Pokemon website</a> as well as the official games. 
-    </div>
-
 </@l.layout>

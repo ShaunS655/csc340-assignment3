@@ -5,13 +5,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-   
+
 @Repository
 public interface PokemonCharacterRepository extends JpaRepository<PokemonCharacter, Long> {
-    
-    // Filter by region (category)
+
+    // These method names must match your model fields (region, name)
     List<PokemonCharacter> findByRegionIgnoreCase(String region);
 
-    // Search by name (partial, case-insensitive)
     List<PokemonCharacter> findByNameContainingIgnoreCase(String name);
+
+    List<PokemonCharacter> findByRegionIgnoreCaseAndNameContainingIgnoreCase(String region, String name);
 }
