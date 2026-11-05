@@ -2,7 +2,7 @@
 
 ## App Description & Character Type
 This application is a Spring Boot RESTful API designed to manage Pokémon characters. It allows users to perform full CRUD operations (Create, Read, Update, Delete) on Pokémon entities, as well as filter characters by region and search for them by name using case-insensitive partial matching. The application uses a PostgreSQL database hosted on Neon and is containerized with Docker for deployment on Render.
-
+  
 ## Entity Attributes & Rules
 
 | Attribute | Type | Rules |
@@ -36,7 +36,7 @@ This application is a Spring Boot RESTful API designed to manage Pokémon charac
 | `GET /api/characters?name=pika` | Search characters by name (partial, case-insensitive) | `200 OK` |
 
 ### Example Request Bodies
-
+  
 #### `POST /api/characters` Example Request Body
 ```json
 {
